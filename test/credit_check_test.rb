@@ -6,7 +6,7 @@ class ValidaterTest < Minitest::Test
 		@card = Validator.new("4929735477250543")
 	end
 
-	def test_can_just_finish_whole_project
+	def test_can_check_credit_card
 		assert_equal "Card is Valid", @card.credit_check
 	end
 end
