@@ -1,5 +1,4 @@
 class Validator
-	attr_reader :card_sum
 	def initialize(card_number = "4929735477250543")
 		@card_number = card_number.split("")
 	end
@@ -28,7 +27,6 @@ class Validator
 
 	def credit_check
 		credit_check = card_sum.reduce(:+)
-		# require'pry';binding.pry
 		if credit_check % 10 == 0
 			"Card is Valid"
 		else
@@ -36,9 +34,3 @@ class Validator
 		end
 	end
 end
-#turn card number into an array, .each_with_index
-#if even? do the doubling and shibang
-#if odd? do nothing
-#if add them back into the array
-#if all numbers added up % 10 == 0
-#
